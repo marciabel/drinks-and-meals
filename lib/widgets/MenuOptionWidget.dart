@@ -14,14 +14,18 @@ class MenuOptionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+<<<<<<< HEAD
       onTap: () => {onTapAction},
+=======
+      onTap: () => onTapAction(),
+>>>>>>> 00fd719 (Home screen. Screen for meal lists. Meal card widget)
       child: Stack(
         alignment: Alignment.center,
         children: [
           Image.network(
             imageUrl,
             fit: BoxFit.cover,
-            width: 200,
+            width: 150,
           ),
           Text(
             text,

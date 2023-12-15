@@ -1,3 +1,4 @@
+import 'package:drinks_and_meals/screens/meals_list.dart';
 import 'package:drinks_and_meals/widgets/MenuOptionWidget.dart';
 import 'package:drinks_and_meals/widgets/DrawerMenu.dart';
 import 'package:flutter/material.dart';
@@ -37,13 +38,35 @@ class HomeScreen extends StatelessWidget {
                 text: 'Drinks',
                 imageUrl:
                     'https://images.immediate.co.uk/production/volatile/sites/30/2021/11/GoodFood_Mocktails-8e3c536.jpg?quality=90&webp=true&fit=1300,866',
+<<<<<<< HEAD
                 onTapAction: () => {print('hice click en el boton')},
+=======
+                onTapAction: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MealsList(),
+                    ),
+                  )
+                },
+>>>>>>> 00fd719 (Home screen. Screen for meal lists. Meal card widget)
               ),
               MenuOptionWidget(
                 text: 'Meals',
                 imageUrl:
                     'https://www.mccormick.com/-/media/project/oneweb/mccormick-us/mccormick/articles/info-graphic.jpg?rev=9300eb3510ca46e6af3abbf13b960985&vd=20210901T181349Z&hash=4F1DBA9346469A176C9A53F2F6ADD9CE',
+<<<<<<< HEAD
                 onTapAction: () => {print('hice click en el boton')},
+=======
+                onTapAction: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MealsList(),
+                    ),
+                  )
+                },
+>>>>>>> 00fd719 (Home screen. Screen for meal lists. Meal card widget)
               ),
             ],
           ),

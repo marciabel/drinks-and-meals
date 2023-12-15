@@ -1,4 +1,5 @@
 import 'package:drinks_and_meals/screens/drinks.dart';
+import 'package:drinks_and_meals/screens/meals_list.dart';
 
 import 'screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,16 +12,7 @@ import 'screens/drinks.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  //runApp(const MyApp());
-
-  runApp(
-      //  MultiProvider(
-      //   providers: [
-      //     ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),
-      //   ],
-      const MyApp()
-      //)
-      );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -36,6 +28,7 @@ class MyApp extends StatelessWidget {
         routes: {
           'home': (context) => const HomeScreen(),
           'drinks': (context) => DrinksScreen(),
+          'meals': (context) => MealsList(),
         });
   }
 }
