@@ -16,14 +16,14 @@ class MenuOptionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {this.onTapAction},
+      onTap: () => onTapAction(),
       child: Stack(
         alignment: Alignment.center,
         children: [
           Image.network(
             this.imageUrl,
             fit: BoxFit.cover,
-            width: 200,
+            width: 150,
           ),
           Text(
             this.text,
