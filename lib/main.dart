@@ -1,6 +1,9 @@
+import 'package:drinks_and_meals/screens/drinks.dart';
+
 import 'screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'screens/drinks.dart';
 //import 'package:flutter_repo_guide/providers/theme_provider.dart';
 
 //import 'package:flutter_application_1/screens/desing_screen.dart'
@@ -8,19 +11,16 @@ import 'package:provider/provider.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-
   //runApp(const MyApp());
 
   runApp(
-    //  MultiProvider(
-    //   providers: [        
-    //     ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),                        
-    //   ],
+      //  MultiProvider(
+      //   providers: [
+      //     ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),
+      //   ],
       const MyApp()
-    //)
-  ); 
-
-
+      //)
+      );
 }
 
 class MyApp extends StatelessWidget {
@@ -30,12 +30,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Drinks&Meals',
-      debugShowCheckedModeBanner: false,
-      initialRoute: 'home',
-      routes: {
-        'home':(context) => const HomeScreen(),
-      }
-    );
+        title: 'Drinks&Meals',
+        debugShowCheckedModeBanner: false,
+        initialRoute: 'home',
+        routes: {
+          'home': (context) => const HomeScreen(),
+          'drinks': (context) => DrinksScreen(),
+        });
   }
 }

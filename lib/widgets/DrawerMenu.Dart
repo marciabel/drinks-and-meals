@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class DrawerMenu extends StatelessWidget {
   final List<Map<String,String>> _menuItems = <Map<String,String>>[
-    {'route':'home','title':'Home','subtitle':'Home + counter app'},       
+    {'route':'home','title':'Home','subtitle':'Home + counter app'},
+    {'route':'drinks','title':'Drinks','subtitle':'Drinks + counter app'},       
   ];
 
   DrawerMenu({super.key});

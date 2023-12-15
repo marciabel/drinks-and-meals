@@ -5,28 +5,26 @@ class MenuOptionWidget extends StatelessWidget {
   final String text;
   final Function onTapAction;
 
-  MenuOptionWidget (
-   {
+  MenuOptionWidget({
     required this.imageUrl,
     required this.text,
     required this.onTapAction,
-  }
-  );
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {this.onTapAction},
+      onTap: () => {onTapAction},
       child: Stack(
         alignment: Alignment.center,
         children: [
           Image.network(
-            this.imageUrl,
+            imageUrl,
             fit: BoxFit.cover,
             width: 200,
           ),
           Text(
-            this.text,
+            text,
             style: TextStyle(
               fontSize: 24.0,
               color: Colors.white,
