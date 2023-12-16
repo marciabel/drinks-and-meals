@@ -13,9 +13,12 @@ class MenuOptionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double containerWidth = MediaQuery.of(context).size.width * 0.4;
+
     return GestureDetector(
       onTap: () => onTapAction(),
       child: Container(
+        width: containerWidth,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
@@ -40,8 +43,8 @@ class MenuOptionWidget extends StatelessWidget {
                 child: Image.network(
                   imageUrl,
                   fit: BoxFit.cover,
-                  width: 200,
-                  height: 200,
+                  width: containerWidth,
+                  height: containerWidth,
                 ),
               ),
             ),
@@ -50,7 +53,7 @@ class MenuOptionWidget extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.purple[50],
+                color: Colors.white,
                 shadows: [
                   Shadow(
                     offset: Offset(0.0, 1.0),
