@@ -20,8 +20,9 @@ class MenuOptionWidget extends StatelessWidget {
         children: [
           Image.network(
             imageUrl,
-            fit: BoxFit.cover,
-            width: 150,
+            fit: BoxFit.fill,
+            width: 200,
+            height: 200,
           ),
           Text(
             text,

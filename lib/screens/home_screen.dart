@@ -1,4 +1,5 @@
 import 'package:drinks_and_meals/screens/meals_list.dart';
+import 'package:drinks_and_meals/screens/drinks.dart';
 import 'package:drinks_and_meals/widgets/MenuOptionWidget.dart';
 import 'package:drinks_and_meals/widgets/DrawerMenu.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MealsList(),
+                      builder: (context) => DrinksScreen(),
                     ),
                   )
                 },
