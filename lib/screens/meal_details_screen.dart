@@ -12,29 +12,66 @@ class MealDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: meal['strMeal']),
-      body: ListView(
-        children: <Widget>[
-          FadeInImage(
-            placeholder: AssetImage('assets/images/loading.gif'),
-            image: NetworkImage(meal['strMealThumb']),
+      backgroundColor: Color.fromARGB(255, 35, 41, 70),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight:
+                200, // modify these values to change how much it shrinks
+            flexibleSpace: FlexibleSpaceBar(
+                background: FadeInImage(
+              placeholder: AssetImage('assets/images/loading.gif'),
+              image: NetworkImage(meal['strMealThumb']),
+              fit: BoxFit.cover,
+            )),
+            backgroundColor: Colors.black.withOpacity(0.7),
           ),
-          const SizedBox(height: 10.0),
-          Text(
-            meal['strMeal'],
-            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 10.0),
+                    Text(
+                      meal['strMeal'],
+                      style: TextStyle(
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 238, 187, 195)),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical:
+                              16.0), // Change 16.0 to the padding you desire
+                      child: Container(
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(200, 255, 255, 254),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text(
+                          meal['strDescription'],
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      "Area: ${meal['strArea']}",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 238, 187, 195),
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    VideoWidget(youtubeUrl: meal['strYoutube']),
+                  ],
+                ),
+              ),
+            ]),
           ),
-          const SizedBox(height: 10.0),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              meal['strDescription'],
-              style: TextStyle(fontSize: 16.0),
-            ),
-          ),
-          Text("Area: ${meal['strArea']}"),
-          VideoWidget(youtubeUrl: meal['strYoutube'])
         ],
       ),
     );

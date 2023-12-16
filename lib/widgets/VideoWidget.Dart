@@ -18,7 +18,9 @@ class VideoWidget extends StatelessWidget {
       return const Text('Video not available');
     }
 
-    return YoutubePlayer(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10.0),
+      child: YoutubePlayer(
       controller: YoutubePlayerController(
         initialVideoId: videoId,
         flags: const YoutubePlayerFlags(
@@ -26,6 +28,7 @@ class VideoWidget extends StatelessWidget {
         ),
       ),
       showVideoProgressIndicator: true,
+    ),
     );
   }
 }

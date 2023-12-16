@@ -1,3 +1,4 @@
+import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
 import 'package:drinks_and_meals/widgets/MealCardWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _MealsListState extends State<MealsList> {
           "https://www.themealdb.com/images/media/meals/rvtvuw1511190488.jpg",
       "strYoutube": "https://www.youtube.com/watch?v=fEN_fm6kX6k",
       "strDescription":
-          "Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth."
+          "Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth.Clam chowder is a creamy soup featuring clams, potatoes, onions, and sometimes bacon, known for its rich flavor and comforting warmth."
     },
     {
       "idMeal": "52815",
@@ -159,9 +160,8 @@ class _MealsListState extends State<MealsList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Meals'),
-      ),
+      appBar: CustomAppBar(title: 'Meals'),
+      backgroundColor: Color.fromARGB(255, 255, 255, 254),
       body: ListView.builder(
         controller: _scrollController,
         itemCount: mealItems.length + (isLoading ? 1 : 0),
