@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/widgets/VideoWidget.dart';
 
@@ -11,9 +12,7 @@ class MealDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(meal['strMeal']),
-      ),
+      appBar: CustomAppBar(title: meal['strMeal']),
       body: ListView(
         children: <Widget>[
           FadeInImage(

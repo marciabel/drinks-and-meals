@@ -1,3 +1,4 @@
+import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/widgets/DrinksCardWidget.dart';
 
@@ -99,10 +100,7 @@ class DrinksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.deepPurple[100],
-        title: Text('Drinks'),
-      ),
+      appBar: CustomAppBar(title: 'Drinks'),
       body: ListView.builder(
         itemCount: drinksList.length + (isLoading ? 1 : 0),
         itemBuilder: (context, index) {

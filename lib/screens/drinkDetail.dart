@@ -1,3 +1,4 @@
+import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 
 class DrinkDetail extends StatelessWidget {
@@ -18,16 +19,7 @@ class DrinkDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        backgroundColor: Colors.deepPurple[50],
-        title: Text(
-          title,
-          style: TextStyle(
-            color: Colors.deepPurpleAccent,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      appBar: CustomAppBar(title: title),
       body: Center(
         child: Container(
           //color: Colors.deepPurple[100],
