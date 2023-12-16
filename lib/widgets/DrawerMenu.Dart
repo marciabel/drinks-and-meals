@@ -67,19 +67,14 @@ class _DrawerHeaderAlternative extends StatelessWidget {
             left: 0,
             child: Container(
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/drawer_background.jpg'),
-                  fit: BoxFit.cover,
-                ),
+                color: Colors.black,
               ),
               child: Center(
-                child: Text(
-                  'Menu',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                child: Image.network(
+                  'https://images.unsplash.com/photo-1492683513054-55277abccd99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+                  fit: BoxFit.cover,
+                  height: double.infinity,
+                  width: double.infinity,
                 ),
               ),
             ),
