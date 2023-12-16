@@ -2,6 +2,7 @@ import 'package:drinks_and_meals/screens/meals_list.dart';
 import 'package:drinks_and_meals/screens/drinks.dart';
 import 'package:drinks_and_meals/widgets/MenuOptionWidget.dart';
 import 'package:drinks_and_meals/widgets/DrawerMenu.dart';
+import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,10 +20,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Drinks&Meals'),
-          centerTitle: true,
-          backgroundColor: Colors.amber),
+      appBar: CustomAppBar(title: 'Drinks&Meals'),
       drawer: DrawerMenu(),
       body: ListView(
         children: [
