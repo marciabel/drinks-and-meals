@@ -38,8 +38,8 @@ Desde la app se puede acceder a dos secciones, una de 'Meals' y otra de 'Drinks'
 
 ### Pantallas
 **Home y Drawer**
-![Pantalla de Home](documentation\home.png)
-![Menu lateral](documentation\drawer.png)
+![Pantalla de Home](documentation/home.png)
+![Menu lateral](documentation/drawer.png)
 
 **Drinks**
 ![Listado de registros de Drinks](documentation\drink-list.png)
