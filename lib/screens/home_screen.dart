@@ -62,14 +62,13 @@ class HomeScreen extends StatelessWidget {
               'Just one small positive thought in the morning can change your whole day',
               style: TextStyle(
                 fontSize: 18.0,
-                fontStyle: FontStyle.italic, // Aplica cursiva al texto
+                fontStyle: FontStyle.italic,
                 color: Colors.black,
                 shadows: [
                   Shadow(
                     offset: Offset(0.0, 1.0),
                     blurRadius: 3.0,
-                    color: Colors.black
-                        .withOpacity(0.5), // Ajusta la opacidad según prefieras
+                    color: Colors.black.withOpacity(0.5),
                   ),
                 ],
               ),

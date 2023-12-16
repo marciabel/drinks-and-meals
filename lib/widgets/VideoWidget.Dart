@@ -13,7 +13,6 @@ class VideoWidget extends StatelessWidget {
       videoId = YoutubePlayer.convertUrlToId(youtubeUrl!);
     }
     
-    // When no videoId provided, don't show the YoutubePlayer
 if (videoId == null || videoId.length < 5) {
   return Padding(
     padding: EdgeInsets.only(top: 50.0), 

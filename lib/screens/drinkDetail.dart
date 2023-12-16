@@ -21,7 +21,6 @@ class DrinkDetail extends StatelessWidget {
       appBar: CustomAppBar(title: ''),
       body: Center(
         child: SingleChildScrollView(
-          // Agrega SingleChildScrollView aquí
           child: Container(
             width: MediaQuery.of(context).size.width * 0.8,
             child: Column(

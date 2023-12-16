@@ -9,7 +9,12 @@ class MealCardWidget extends StatelessWidget {
   final String strDescription;
   final String subtitle = 'Click for more info';
 
-  MealCardWidget({required this.imageUrl, required this.title, required this.strYoutube, required this.strDescription, required this.strArea});
+  MealCardWidget(
+      {required this.imageUrl,
+      required this.title,
+      required this.strYoutube,
+      required this.strDescription,
+      required this.strArea});
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +26,13 @@ class MealCardWidget extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MealDetailScreen(
-                  meal: {
-                    'strMealThumb': imageUrl,
-                    'strMeal': title, 
-                    'strDescription': strDescription, // pass the meal description
-                    'strYoutube': strYoutube, 
-                    'strArea': strArea,
-                  }
-                ),
+                builder: (context) => MealDetailScreen(meal: {
+                  'strMealThumb': imageUrl,
+                  'strMeal': title,
+                  'strDescription': strDescription,
+                  'strYoutube': strYoutube,
+                  'strArea': strArea,
+                }),
               ),
             );
           },

@@ -16,8 +16,7 @@ class MealDetailScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            expandedHeight:
-                200, // modify these values to change how much it shrinks
+            expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
                 background: FadeInImage(
               placeholder: AssetImage('assets/images/loading.gif'),
@@ -43,9 +42,7 @@ class MealDetailScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical:
-                              16.0), // Change 16.0 to the padding you desire
+                      padding: const EdgeInsets.symmetric(vertical: 16.0),
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
