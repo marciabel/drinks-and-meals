@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class DrinkDetail extends StatelessWidget {
   final String title;
   final String imageUrl;
-  //final List<String> ingredients;
   final List ingredients;
   final String instructions;
 
@@ -18,18 +17,16 @@ class DrinkDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.grey[100],
-      appBar: CustomAppBar(title: title),
+      backgroundColor: Color.fromARGB(255, 35, 41, 70),
+      appBar: CustomAppBar(title: ''),
       body: Center(
         child: Container(
-          //color: Colors.deepPurple[100],
           width: MediaQuery.of(context).size.width * 0.8,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 height: 200.0,
-                width: 200.0,
                 child: Image.network(
                   imageUrl,
                   fit: BoxFit.contain,
@@ -38,21 +35,23 @@ class DrinkDetail extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  color: Colors.deepPurpleAccent,
-                  fontSize: 24.0,
+                  color: Color.fromARGB(255, 238, 187, 195),
+                  fontSize: 40.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 16.0),
               Text(
-                'Instructions',
+                'Ingredients',
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 24.0,
                   fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(200, 255, 255, 254),
+                  decoration: TextDecoration.underline,
                 ),
               ),
               Container(
-                color: Colors.deepPurple[50],
+                //color: Colors.deepPurple[50],
                 child: Column(
                   children: List.generate(
                     ingredients.length,
@@ -64,12 +63,19 @@ class DrinkDetail extends StatelessWidget {
                           children: [
                             Text(
                               ingredients[index]["name"],
-                              style: TextStyle(fontSize: 16.0),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color.fromARGB(200, 255, 255, 254),
+                                
+                                ),
+                              
                             ),
                             Spacer(),
                             Text(
                               ingredients[index]["measure"],
-                              style: TextStyle(fontSize: 16.0),
+                              style: TextStyle(fontSize: 20.0,
+                              color: Color.fromARGB(200, 255, 255, 254)
+                            ),
                             ),
                             SizedBox(width: 8.0),
                           ],
@@ -83,21 +89,22 @@ class DrinkDetail extends StatelessWidget {
               Text(
                 'Instructions',
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 24.0,
                   fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(200, 255, 255, 254),
+                  decoration: TextDecoration.underline,
                 ),
               ),
-              SizedBox(height: 16.0),
+              SizedBox(height: 23.0),
               Container(
-                color: Colors
-                    .deepPurple[50], // Cambia el color según tu preferencia
+                color: Color.fromARGB(255, 236, 211, 215), // Cambia el color según tu preferencia
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     instructions,
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 16.0,
+                      fontSize: 20.0,
                     ),
                   ),
                 ),

@@ -14,9 +14,27 @@ class VideoWidget extends StatelessWidget {
     }
     
     // When no videoId provided, don't show the YoutubePlayer
-    if (videoId == null || videoId.length < 5) {
-      return const Text('Video not available');
-    }
+if (videoId == null || videoId.length < 5) {
+  return Padding(
+    padding: EdgeInsets.only(top: 50.0), 
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Icon(
+          Icons.sentiment_dissatisfied, 
+          size: 50.0,
+          color: Color.fromARGB(255, 238, 187, 195),
+        ),
+        Text(
+          'Video not available',
+          style: TextStyle(
+            color: Color.fromARGB(255, 238, 187, 195),
+          ),
+        ),
+      ],
+    ),
+  );
+}
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(10.0),

@@ -148,7 +148,6 @@ class _MealsListState extends State<MealsList> {
     if (!isLoading) {
       setState(() => isLoading = true);
 
-      // Add additional 10 new items within a delay (imitate network delay)
       await Future.delayed(Duration(seconds: 2)).then((_) {
         setState(() {
           isLoading = false;

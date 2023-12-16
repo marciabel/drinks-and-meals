@@ -101,6 +101,7 @@ class DrinksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: 'Drinks'),
+      backgroundColor: Color.fromARGB(255, 35, 41, 70),
       body: ListView.builder(
         itemCount: drinksList.length + (isLoading ? 1 : 0),
         itemBuilder: (context, index) {

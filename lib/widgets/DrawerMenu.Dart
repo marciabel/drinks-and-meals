@@ -32,7 +32,7 @@ class DrawerMenu extends StatelessWidget {
                 subtitle: Text(item['subtitle'] ?? '',
                     style: const TextStyle(
                         fontFamily: 'RobotoMono', fontSize: 12)),
-                leading: Icon(item['icon'], color: Colors.deepPurple[400]),
+                leading: Icon(item['icon'], color: Color.fromARGB(255, 35, 41, 70),),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, item['route']!);
@@ -56,7 +56,7 @@ class _DrawerHeaderAlternative extends StatelessWidget {
     return DrawerHeader(
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: Colors.deepPurple[400],
+        color: Color.fromARGB(255, 35, 41, 70),
       ),
       child: Stack(
         children: [

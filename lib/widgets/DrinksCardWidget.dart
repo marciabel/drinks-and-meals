@@ -59,7 +59,7 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
                               Text(
                                 widget.title,
                                 style: TextStyle(
-                                    color: Colors.deepPurple,
+                                    color: Color.fromARGB(255, 35, 41, 70),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 30),
                               )

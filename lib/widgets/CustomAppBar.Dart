@@ -10,6 +10,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         title,
+        style: TextStyle(
+          color:Color.fromARGB(200, 255, 255, 254),
+        )
         ),
       centerTitle: true,
       backgroundColor: Color.fromARGB(255, 35, 41, 70),
