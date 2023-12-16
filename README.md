@@ -42,15 +42,15 @@ Desde la app se puede acceder a dos secciones, una de 'Meals' y otra de 'Drinks'
 ![Menu lateral](documentation/drawer.png)
 
 **Drinks**
-![Listado de registros de Drinks](documentation\drink-list.png)
-![Detalle de un registro Drink](documentation\drink-detail.png)
+![Listado de registros de Drinks](documentation/drink-list.png)
+![Detalle de un registro Drink](documentation/drink-detail.png)
 
 **Meals**
-![Listado de registros de Meals](documentation\meal-list.png)
-![Detalle de un registro Meal](documentation\meal-detail.png)
-![Detalle de un registro Meal - No hay link de YouTube](documentation\meal-detail-no-link.png)
-![Detalle de un registro Meal - Descripcion larga](documentation\meal-detail-scroll.png)
-![Detalle de un registro Meal - Descripcion larga](documentation\meal-detail-scroll-2.png)
+![Listado de registros de Meals](documentation/meal-list.png)
+![Detalle de un registro Meal](documentation/meal-detail.png)
+![Detalle de un registro Meal - No hay link de YouTube](documentation/meal-detail-no-link.png)
+![Detalle de un registro Meal - Descripcion larga](documentation/meal-detail-scroll.png)
+![Detalle de un registro Meal - Descripcion larga](documentation/meal-detail-scroll-2.png)
 
 ### Autoras
 
