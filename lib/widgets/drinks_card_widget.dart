@@ -1,4 +1,4 @@
-import 'package:drinks_and_meals/screens/drinkDetail.dart';
+import 'package:drinks_and_meals/screens/drink_detail.dart';
 import 'package:flutter/material.dart';
 
 class DrinksCardWidget extends StatefulWidget {

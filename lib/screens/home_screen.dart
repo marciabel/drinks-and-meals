@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/screens/meals_list.dart';
 import 'package:drinks_and_meals/screens/drinks.dart';
-import 'package:drinks_and_meals/widgets/MenuOptionWidget.dart';
+import 'package:drinks_and_meals/widgets/menu_option_widget.dart';
 import 'package:drinks_and_meals/widgets/DrawerMenu.dart';
 import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
 
