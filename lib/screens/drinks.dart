@@ -1,6 +1,6 @@
-import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
+import 'package:drinks_and_meals/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:drinks_and_meals/widgets/DrinksCardWidget.dart';
+import 'package:drinks_and_meals/widgets/drinks_card_widget.dart';
 
 class DrinksScreen extends StatelessWidget {
   final List drinksList = [

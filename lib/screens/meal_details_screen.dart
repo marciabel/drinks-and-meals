@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
+import 'package:drinks_and_meals/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:drinks_and_meals/widgets/VideoWidget.dart';
+import 'package:drinks_and_meals/widgets/video_widget.dart';
 
 class MealDetailScreen extends StatelessWidget {
   final Map meal;

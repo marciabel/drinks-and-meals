@@ -1,5 +1,5 @@
-import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
-import 'package:drinks_and_meals/widgets/MealCardWidget.dart';
+import 'package:drinks_and_meals/widgets/custom_app_bar.dart';
+import 'package:drinks_and_meals/widgets/meal_card_widget.dart';
 import 'package:flutter/material.dart';
 
 class MealsList extends StatefulWidget {
