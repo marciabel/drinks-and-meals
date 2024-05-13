@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import 'package:drinks_and_meals/widgets/custom_app_bar.dart';
-=======
-import 'package:drinks_and_meals/widgets/CustomAppBar.dart';
->>>>>>> dda0f0d6cd6f42a665a633044fbd70de2c2790e3
 import 'package:drinks_and_meals/widgets/meal_card_widget.dart';
 import 'package:flutter/material.dart';
 
