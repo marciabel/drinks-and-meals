@@ -1,7 +1,4 @@
-import 'package:drinks_and_meals/screens/drinks.dart';
-import 'package:drinks_and_meals/screens/meals_list.dart';
-
-import 'screens/home_screen.dart';
+import 'package:drinks_and_meals/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,4 +1,4 @@
-import 'package:drinks_and_meals/widgets/custom_app_bar.dart';
+import 'package:drinks_and_meals/widgets/common_widgets.dart';
 import 'package:flutter/material.dart';
 
 class DrinkDetail extends StatelessWidget {

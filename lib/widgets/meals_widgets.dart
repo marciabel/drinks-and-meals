@@ -1,0 +1,1 @@
+export 'package:drinks_and_meals/widgets/meal_card_widget.dart';
