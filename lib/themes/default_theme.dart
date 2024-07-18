@@ -47,6 +47,7 @@ class DefaultTheme{
           ),
         )
       );
+  
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
         primaryColor: Colors.greenAccent,
         appBarTheme: const AppBarTheme(
