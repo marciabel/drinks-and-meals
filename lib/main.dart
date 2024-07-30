@@ -1,3 +1,4 @@
+import 'package:drinks_and_meals/providers/new_meals.dart';
 import 'package:drinks_and_meals/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/providers/theme_provider.dart';
@@ -10,7 +11,8 @@ void main() {
   runApp(
      MultiProvider(
       providers: [        
-        ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),                        
+        ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),
+        ChangeNotifierProvider(create: (BuildContext context) => MealsProvider()),                        
       ],
       child: const MyApp()
     )

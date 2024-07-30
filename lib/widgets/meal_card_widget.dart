@@ -1,20 +1,12 @@
+import 'package:drinks_and_meals/models/meal_info.dart';
 import 'package:drinks_and_meals/screens/meal_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class MealCardWidget extends StatelessWidget {
-  final String imageUrl;
-  final String strYoutube;
-  final String title;
-  final String strArea;
-  final String strDescription;
+  final MealInfo meal;
   final String subtitle = 'Click for more info';
 
-  MealCardWidget(
-      {required this.imageUrl,
-      required this.title,
-      required this.strYoutube,
-      required this.strDescription,
-      required this.strArea});
+  MealCardWidget({required this.meal});
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +19,11 @@ class MealCardWidget extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => MealDetailScreen(meal: {
-                  'strMealThumb': imageUrl,
-                  'strMeal': title,
-                  'strDescription': strDescription,
-                  'strYoutube': strYoutube,
-                  'strArea': strArea,
+                  'strMealThumb': meal.strMealThumb,
+                  'strMeal': meal.strMeal,
+                  'strDescription': meal.strDescription,
+                  'strYoutube': meal.strYoutube,
+                  'strArea': meal.strArea,
                 }),
               ),
             );
@@ -41,7 +33,7 @@ class MealCardWidget extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(imageUrl),
+                image: NetworkImage(meal.strMealThumb),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     Colors.black.withOpacity(0.6), BlendMode.darken),
@@ -52,7 +44,7 @@ class MealCardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  title,
+                  meal.strMeal,
                   style: const TextStyle(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
