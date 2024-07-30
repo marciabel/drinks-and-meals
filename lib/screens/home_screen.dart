@@ -1,16 +1,23 @@
+import 'package:drinks_and_meals/providers/new_meals.dart';
 import 'package:flutter/material.dart';
 
 import 'package:drinks_and_meals/widgets/common_widgets.dart';
 
 import 'package:drinks_and_meals/screens/meals_list.dart';
 import 'package:drinks_and_meals/screens/drinks.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (BuildContext context) => MealsProvider()),
+        //ChangeNotifierProvider(create: (BuildContext context) => DrinksProvider()),
+      ],
+      child: Scaffold(
       appBar: CustomAppBar(title: 'Drinks&Meals'),
       drawer: DrawerMenu(),
       body: Column(
@@ -77,6 +84,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
   }
 }
