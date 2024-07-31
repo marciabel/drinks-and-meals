@@ -71,8 +71,6 @@ class _MealsListState extends State<MealsList> {
   }
 }
 
-
-
 class _LoadingIcon extends StatelessWidget {
   const _LoadingIcon({
     Key? key,
