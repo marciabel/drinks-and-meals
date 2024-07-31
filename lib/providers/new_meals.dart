@@ -7,7 +7,7 @@ import '../models/meal_info.dart';
 import '../models/meal_list.dart';
 
 class MealsProvider extends ChangeNotifier {
-  final String _baseUrl = 'meal-and-drinks.onrender.com/api-express/v1';
+  final String _baseUrl = 'https://meal-and-drinks.onrender.com/api-express/v1';
 
   bool isLoading= false;
 
@@ -23,25 +23,19 @@ class MealsProvider extends ChangeNotifier {
     isLoading = true;
     notifyListeners();
 
-    final url = (('$_baseUrl/meals/random')); 
+    final url = Uri.parse('$_baseUrl/meals/random'); 
 
     print('url future: $url');
       
-    final response = await http.get(url as Uri); 
+    final response = await http.get(url); 
 
-    // print(response.body);
-
-    final data = json.decode(response.body);    
-        print('--------------------------------------------------');
-    print(response);
-        print('--------------------------------------------------');
+    final data = response.body;
+    final mealsList = MealList.fromJson(data);
     
-    final dataDecoded = MealList.fromJson(data);    
+    //final dataDecoded = MealList.fromJson(response.body);    
 
-    this.meals = [...dataDecoded];
+    this.meals = mealsList;
 
-    print('--------------------------------------------------');
-    print(this.meals);
     isLoading = false;
     notifyListeners();
   }

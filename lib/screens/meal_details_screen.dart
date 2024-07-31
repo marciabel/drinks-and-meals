@@ -49,7 +49,7 @@ class MealDetailScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Text(
-                          meal['strDescription'],
+                          meal['strInstructions'],
                           style: TextStyle(fontSize: 20.0),
                         ),
                       ),

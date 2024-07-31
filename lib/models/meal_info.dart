@@ -4,6 +4,7 @@ class MealInfo {
   String strArea;
   String strMealThumb;
   String strYoutube;
+  String strInstructions;
 
   MealInfo({
     required this.idMeal,
@@ -11,15 +12,17 @@ class MealInfo {
     required this.strArea,
     required this.strMealThumb,
     required this.strYoutube,
+    required this.strInstructions
   });
 
-  factory MealInfo.fromJson(Map<String, dynamic> json) => MealInfo(
+  factory MealInfo.fromJson(Map<String, dynamic> json) { 
+    return MealInfo(
       idMeal: json["idMeal"],
       strMeal: json["strMeal"],
       strArea: json["strArea"],
       strMealThumb: json["strMealThumb"],
       strYoutube: json["strYoutube"],
-  );
-
-  get strDescription => null;
+      strInstructions: json["strInstructions"],
+    );
+  }
 }

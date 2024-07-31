@@ -21,7 +21,7 @@ class MealCardWidget extends StatelessWidget {
                 builder: (context) => MealDetailScreen(meal: {
                   'strMealThumb': meal.strMealThumb,
                   'strMeal': meal.strMeal,
-                  'strDescription': meal.strDescription,
+                  'strInstructions': meal.strInstructions,
                   'strYoutube': meal.strYoutube,
                   'strArea': meal.strArea,
                 }),
