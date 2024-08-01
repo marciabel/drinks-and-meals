@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'drink_info.dart';
 
 class ListDrinkModel {

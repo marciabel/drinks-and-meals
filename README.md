@@ -27,11 +27,15 @@ Se testeó en los siguientes modelos de celulares:
 - Pixel API 33/34: Resolution (px): 1080 x 1920 | Resolution (dp): 412 x 732
 - Pixel 5 API 33/34: Resolution (px): 1080 x 2340 | Resolution (dp): 393 x 851
 
+También se testeo corriendolo en Chrome, pero en este caso no esta mostrando la imagen del inicio. Tampoco acepta el reproductor de video que tiene la pantalla de Meal Detail. 
+
 ### Funcionalidades
 Desde la app se puede acceder a dos secciones, una de 'Meals' y otra de 'Drinks'.
 
 **Drinks:** Provee un listado de tragos, a los cuales se puede ingresar y obtener más detalles de cada uno respecto a ingredientes e instrucciones de preparación. Además se pueden likear ciertos tragos como una funcionalidad extra. 
-**Meals:** Provee un listado de platillos, a los cuales se puede ingresar y obtener más detalles. Allí se podrá ver las instrucciones, junto con un video de Youtube donde se explica la receta. 
+**Meals:** Provee un listado de platillos, a los cuales se puede ingresar y obtener más detalles. Allí se podrá ver las instrucciones, junto con un video de Youtube donde se explica la receta.
+
+En esta versión **se incluyo el uso de temas para la UI**. Desde el menú que se encuentra sobre la esquina superior izquierda (ver imagen en la sección de [Pantallas](#pantallas)), puede usarse un boton de toggle que permite cambiar entre el modo 'Light' y el modo 'Dark' para toda la aplicación. 
 
 ### Pantallas
 **Home y Drawer**

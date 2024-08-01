@@ -1,7 +1,6 @@
 import 'package:drinks_and_meals/models/drink_info.dart';
 import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:drinks_and_meals/screens/drink_detail.dart';
-import 'package:drinks_and_meals/widgets/drinks_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
