@@ -30,6 +30,6 @@ class DefaultTheme {
 
       listTileTheme: const ListTileThemeData(iconColor: Color.fromARGB(255, 255, 255, 254)),
 
-      cardColor: Colors.amber,
+      
       );
 }
