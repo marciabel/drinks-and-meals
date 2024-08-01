@@ -44,7 +44,6 @@ class _MealsListState extends State<MealsList> {
             },
             child: Scaffold(
               appBar: CustomAppBar(title: 'Meals'),
-              backgroundColor: Color.fromARGB(255, 255, 255, 254),
               body: ListView.builder(
                 controller: _scrollController,
                 itemCount: mealsProvider.meals.length + (isLoading ? 1 : 0),

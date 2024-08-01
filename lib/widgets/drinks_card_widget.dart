@@ -1,7 +1,9 @@
 import 'package:drinks_and_meals/models/drink_info.dart';
+import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:drinks_and_meals/screens/drink_detail.dart';
 import 'package:drinks_and_meals/widgets/drinks_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DrinksCardWidget extends StatefulWidget {
   final DrinkInfo drink;
@@ -17,6 +19,7 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return Center(
       child: Card(
         clipBehavior: Clip.hardEdge,
@@ -53,7 +56,11 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
                               Text(
                                 widget.drink.strDrink,
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 35, 41, 70),
+                                    color:
+                                        themeProvider.currentTheme.brightness ==
+                                                Brightness.dark
+                                            ? Color.fromARGB(255, 238, 187, 195)
+                                            : Color.fromARGB(255, 35, 41, 70),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 30),
                               )

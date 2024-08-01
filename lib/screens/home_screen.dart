@@ -1,4 +1,5 @@
 import 'package:drinks_and_meals/providers/new_meals.dart';
+import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:drinks_and_meals/widgets/common_widgets.dart';
@@ -13,6 +14,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
@@ -78,7 +81,9 @@ class HomeScreen extends StatelessWidget {
                     Shadow(
                       offset: Offset(0.0, 1.0),
                       blurRadius: 3.0,
-                      color: Colors.black.withOpacity(0.5),
+                      color: themeProvider.currentTheme.brightness == Brightness.dark
+                          ? Color.fromARGB(255, 236, 211, 215).withOpacity(0.5)
+                          : Colors.black.withOpacity(0.5), 
                     ),
                   ],
                 ),
