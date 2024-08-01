@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:drinks_and_meals/widgets/common_widgets.dart';
+import 'package:provider/provider.dart';
 
 class MealDetailScreen extends StatelessWidget {
   final Map meal;
@@ -10,6 +12,8 @@ class MealDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 35, 41, 70),
       body: CustomScrollView(
@@ -45,7 +49,9 @@ class MealDetailScreen extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(200, 255, 255, 254),
+                          color: themeProvider.currentTheme.brightness == Brightness.dark
+                          ?  Color.fromARGB(255, 3, 5, 16)
+                          : Color.fromARGB(200, 255, 255, 254),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Text(

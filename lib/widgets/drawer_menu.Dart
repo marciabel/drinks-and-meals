@@ -52,7 +52,6 @@ class DrawerMenu extends StatelessWidget {
                             fontFamily: 'RobotoMono', fontSize: 12)),
                     leading: Icon(
                       item['icon'],
-                      color: Color.fromARGB(255, 35, 41, 70),
                     ),
                     onTap: () {
                       Navigator.pop(context);

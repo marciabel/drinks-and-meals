@@ -1,46 +1,35 @@
 import 'package:flutter/material.dart';
 
 class DefaultTheme {
-  static const Color primary = Colors.red;
-  static final Color primaryHover = Colors.red.shade600;
+  static const Color lightBackground = Color.fromARGB(255, 255, 255, 254);
+  static final Color darkBackground = Color.fromARGB(255, 35, 41, 70);
 
   static final ThemeData defaultTheme = ThemeData.light().copyWith(
       primaryColor: Colors.greenAccent,
-      appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.red, foregroundColor: Colors.red),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-          style: TextButton.styleFrom(
-              backgroundColor: primary, foregroundColor: Colors.white)),
-      textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-              backgroundColor: Colors.transparent, foregroundColor: primary)),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: primary, foregroundColor: Colors.white),
-      listTileTheme: const ListTileThemeData(iconColor: primary),
+
+      appBarTheme: AppBarTheme(
+          backgroundColor: darkBackground,
+          iconTheme: IconThemeData(color: lightBackground)),
+
+      listTileTheme: ListTileThemeData(iconColor: darkBackground),
+
+      scaffoldBackgroundColor: lightBackground,
+
       switchTheme: SwitchThemeData(),
-      inputDecorationTheme: InputDecorationTheme(
-        floatingLabelStyle: TextStyle(color: primary),
-        enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: primary)),
-        focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: primary)),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-      ));
+
+      drawerTheme: DrawerThemeData(),
+
+      );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
       primaryColor: Colors.greenAccent,
-      appBarTheme: const AppBarTheme(backgroundColor: primary),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-          style: TextButton.styleFrom(
-              backgroundColor: primary, foregroundColor: Colors.white)),
-      textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-              backgroundColor: Colors.transparent, foregroundColor: primary)),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: primary, foregroundColor: Colors.white),
-      listTileTheme: const ListTileThemeData(iconColor: primary));
+
+      appBarTheme: const AppBarTheme(backgroundColor: Color.fromARGB(255, 3, 5, 16)),
+      
+      scaffoldBackgroundColor:darkBackground,
+
+      listTileTheme: const ListTileThemeData(iconColor: Color.fromARGB(255, 255, 255, 254)),
+
+      cardColor: Colors.amber,
+      );
 }

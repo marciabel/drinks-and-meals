@@ -4,7 +4,6 @@ import 'package:drinks_and_meals/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:drinks_and_meals/helpers/preferences.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
