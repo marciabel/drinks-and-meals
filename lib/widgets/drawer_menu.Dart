@@ -1,4 +1,6 @@
+import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DrawerMenu extends StatelessWidget {
   final List<Map<String, dynamic>> _menuItems = [
@@ -11,34 +13,54 @@ class DrawerMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const _DrawerHeaderAlternative(),
+          _DrawerHeaderAlternative(),
+          ListTile(
+            title: Text(
+              'Dark Mode',
+              style: TextStyle(
+                fontFamily: 'FuzzyBubbles',
+                fontSize: 18,
+              ),
+            ),
+            trailing: Switch(
+              value: themeProvider.currentTheme.brightness == Brightness.dark,
+              onChanged: (value) => themeProvider.toggleTheme(),
+            ),
+          ),
           ...ListTile.divideTiles(
             context: context,
-            tiles: _menuItems.map(
-              (item) => ListTile(
-                contentPadding: const EdgeInsets.symmetric(
-                  vertical: 0,
-                  horizontal: 16,
-                ),
-                dense: true,
-                minLeadingWidth: 25,
-                title: Text(item['title']!,
-                    style: const TextStyle(
-                        fontFamily: 'FuzzyBubbles', fontSize: 18)),
-                subtitle: Text(item['subtitle'] ?? '',
-                    style: const TextStyle(
-                        fontFamily: 'RobotoMono', fontSize: 12)),
-                leading: Icon(item['icon'], color: Color.fromARGB(255, 35, 41, 70),),
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.pushNamed(context, item['route']!);
-                },
-              ),
-            ).toList(),
+            tiles: _menuItems
+                .map(
+                  (item) => ListTile(
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 0,
+                      horizontal: 16,
+                    ),
+                    dense: true,
+                    minLeadingWidth: 25,
+                    title: Text(item['title']!,
+                        style: const TextStyle(
+                            fontFamily: 'FuzzyBubbles', fontSize: 18)),
+                    subtitle: Text(item['subtitle'] ?? '',
+                        style: const TextStyle(
+                            fontFamily: 'RobotoMono', fontSize: 12)),
+                    leading: Icon(
+                      item['icon'],
+                      color: Color.fromARGB(255, 35, 41, 70),
+                    ),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, item['route']!);
+                    },
+                  ),
+                )
+                .toList(),
           )
         ],
       ),
@@ -71,7 +93,7 @@ class _DrawerHeaderAlternative extends StatelessWidget {
               ),
               child: Center(
                 child: Image.network(
-                  'https://images.unsplash.com/photo-1492683513054-55277abccd99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+                  'https://images.unsplash.com/photo-1492683513054-55277abccd99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                   fit: BoxFit.cover,
                   height: double.infinity,
                   width: double.infinity,
