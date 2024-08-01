@@ -28,8 +28,13 @@ class Ingredient {
 
   Ingredient({required this.name, required this.measure});
 
-  factory Ingredient.fromJson(Map<String, dynamic> json) => Ingredient(
-        name: json['name'] as String,
-        measure: json['measure'] as String,
-      );
+  factory Ingredient.fromJson(Map<String, dynamic> json) {
+    json['name'] = json['name'] == null ? '' : json['name'];
+    json['measure'] = json['measure'] == null ? '' : json['measure'];
+    Ingredient ingredient = Ingredient(
+      name: json['name'] as String,
+      measure: json['measure'] as String,
+    );
+    return ingredient;
+  }
 }
