@@ -61,7 +61,7 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
                                             ? Color.fromARGB(255, 238, 187, 195)
                                             : Color.fromARGB(255, 35, 41, 70),
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 30),
+                                    fontSize: 25),
                               )
                             ],
                           ),

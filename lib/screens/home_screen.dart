@@ -76,7 +76,9 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18.0,
                   fontStyle: FontStyle.italic,
-                  color: Colors.black,
+                  color: themeProvider.currentTheme.brightness == Brightness.dark
+                          ? Color.fromARGB(255, 236, 211, 215)
+                          : Colors.black,
                   shadows: [
                     Shadow(
                       offset: Offset(0.0, 1.0),
