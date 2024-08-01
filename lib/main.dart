@@ -1,3 +1,5 @@
+import 'package:drinks_and_meals/providers/new_drinks.dart';
+import 'package:drinks_and_meals/providers/new_meals.dart';
 import 'package:drinks_and_meals/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/providers/theme_provider.dart';
@@ -7,14 +9,12 @@ import 'package:drinks_and_meals/helpers/preferences.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(
-     MultiProvider(
-      providers: [        
-        ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),                        
-      ],
-      child: const MyApp()
-    )
-  );
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider<ThemeProvider>(
+        create: (_) => ThemeProvider(isDarkMode: Preferences.darkmode)),
+    ChangeNotifierProvider(create: (BuildContext context) => MealsProvider()),
+    ChangeNotifierProvider(create: (BuildContext context) => DrinkProvider()),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

@@ -1,18 +1,12 @@
+import 'package:drinks_and_meals/models/drink_info.dart';
 import 'package:drinks_and_meals/screens/drink_detail.dart';
+import 'package:drinks_and_meals/widgets/drinks_widgets.dart';
 import 'package:flutter/material.dart';
 
 class DrinksCardWidget extends StatefulWidget {
-  final String imageUrl;
-  final String title;
-  final List ingredients;
-  final String instructions;
+  final DrinkInfo drink;
 
-  DrinksCardWidget({
-    required this.imageUrl,
-    required this.title,
-    required this.ingredients,
-    required this.instructions,
-  });
+  DrinksCardWidget({required this.drink});
 
   @override
   _DrinksCardWidgetState createState() => _DrinksCardWidgetState();
@@ -33,10 +27,10 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
               context,
               MaterialPageRoute(
                 builder: (context) => DrinkDetail(
-                  title: widget.title,
-                  imageUrl: widget.imageUrl,
-                  ingredients: widget.ingredients,
-                  instructions: widget.instructions,
+                  title: widget.drink.strDrink,
+                  imageUrl: widget.drink.strDrinkThumb,
+                  ingredients: widget.drink.ingredients,
+                  instructions: widget.drink.strInstructions,
                 ),
               ),
             );
@@ -57,7 +51,7 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                widget.title,
+                                widget.drink.strDrink,
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 35, 41, 70),
                                     fontWeight: FontWeight.bold,
@@ -71,7 +65,7 @@ class _DrinksCardWidgetState extends State<DrinksCardWidget> {
                           child: FadeInImage(
                             placeholder:
                                 AssetImage('assets/images/loading.gif'),
-                            image: NetworkImage(widget.imageUrl),
+                            image: NetworkImage(widget.drink.strDrinkThumb),
                             fit: BoxFit.fitWidth,
                           ),
                         ),
