@@ -1,5 +1,7 @@
 import 'package:drinks_and_meals/widgets/common_widgets.dart';
+import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DrinkDetail extends StatelessWidget {
   final String title;
@@ -16,8 +18,11 @@ class DrinkDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 35, 41, 70),
+      backgroundColor: themeProvider.currentTheme.brightness == Brightness.dark
+          ? Color.fromARGB(255, 3, 5, 16)
+          : Color.fromARGB(255, 35, 41, 70),
       appBar: CustomAppBar(title: ''),
       body: Center(
         child: SingleChildScrollView(
@@ -96,7 +101,10 @@ class DrinkDetail extends StatelessWidget {
                 ),
                 SizedBox(height: 23.0),
                 Container(
-                  color: Color.fromARGB(255, 236, 211, 215),
+                  color:
+                      themeProvider.currentTheme.brightness == Brightness.dark
+                          ? Color.fromARGB(255, 18, 23, 47)
+                          : Color.fromARGB(255, 236, 211, 215),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(

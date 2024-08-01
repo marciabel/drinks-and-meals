@@ -1,4 +1,5 @@
 import 'package:drinks_and_meals/providers/new_drinks.dart';
+import 'package:drinks_and_meals/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:drinks_and_meals/widgets/common_widgets.dart';
 import 'package:drinks_and_meals/widgets/drinks_widgets.dart';
@@ -14,6 +15,7 @@ class DrinksScreen extends StatelessWidget {
     final drinksProvider = Provider.of<DrinkProvider>(context);
     final GlobalKey<RefreshIndicatorState> _refresIndicatorKey =
         GlobalKey<RefreshIndicatorState>();
+    final themeProvider = Provider.of<ThemeProvider>(context);
 
     return MediaQuery.removePadding(
       context: context,
@@ -23,7 +25,7 @@ class DrinksScreen extends StatelessWidget {
         children: [
           RefreshIndicator(
             color: Colors.white,
-            backgroundColor: Colors.red,
+            backgroundColor: Color.fromARGB(255, 3, 5, 16),
             strokeWidth: 4.0,
             displacement: 40,
             key: _refresIndicatorKey,
@@ -32,7 +34,10 @@ class DrinksScreen extends StatelessWidget {
             },
             child: Scaffold(
               appBar: CustomAppBar(title: 'Drinks'),
-              backgroundColor: Color.fromARGB(255, 255, 255, 254),
+              backgroundColor:
+                  themeProvider.currentTheme.brightness == Brightness.dark
+                      ? Color.fromARGB(255, 3, 5, 16)
+                      : Color.fromARGB(255, 35, 41, 70),
               body: ListView.builder(
                 controller: _scrollController,
                 itemCount: drinksProvider.drinks.length + (isLoading ? 1 : 0),
