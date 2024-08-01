@@ -32,5 +32,6 @@ class DefaultTheme {
 
       cardTheme: CardTheme(
         color: darkBackground,
-      );
+      ),
+  );
 }
