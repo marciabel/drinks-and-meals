@@ -29,14 +29,14 @@ class DrinkProvider extends ChangeNotifier {
 
     final response = await http.get(url);
 
-    // print(response.body);
+    print(response.body);
 
     final data = json.decode(response.body);
     print('--------------------------------------------------');
     print(response);
     print('--------------------------------------------------');
 
-    final dataDecoded = ListDrinkModel.fromJson(data);
+    final dataDecoded = ListDrinkModel.fromJson(data["results"]);
 
     this.drinks = [...dataDecoded];
 

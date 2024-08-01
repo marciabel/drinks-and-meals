@@ -62,7 +62,7 @@ class DrinkDetail extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                ingredients[index]["name"],
+                                ingredients[index].name,
                                 style: TextStyle(
                                   fontSize: 20.0,
                                   color: Color.fromARGB(200, 255, 255, 254),
@@ -70,7 +70,7 @@ class DrinkDetail extends StatelessWidget {
                               ),
                               Spacer(),
                               Text(
-                                ingredients[index]["measure"],
+                                ingredients[index].measure,
                                 style: TextStyle(
                                   fontSize: 20.0,
                                   color: Color.fromARGB(200, 255, 255, 254),
