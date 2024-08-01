@@ -31,7 +31,7 @@ class DrinksScreen extends StatelessWidget {
               return await drinksProvider.getNewDrinks();
             },
             child: Scaffold(
-              appBar: CustomAppBar(title: 'Meals'),
+              appBar: CustomAppBar(title: 'Drinks'),
               backgroundColor: Color.fromARGB(255, 255, 255, 254),
               body: ListView.builder(
                 controller: _scrollController,
